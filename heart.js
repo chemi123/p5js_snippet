@@ -7,6 +7,18 @@ function heartWithColor(x, y, color) {
   endShape();
 }
 
+function heartWithSize(x, y, size) {
+  beginShape();
+  vertex(x, y);
+  bezierVertex(x + size / 2, y - size / 2,
+               x + size * 7 / 6, y + size / 3,
+               x, y + size);
+  bezierVertex(x - size * 7 / 6, y + size / 3,
+               x - size / 2, y - size / 2,
+               x, y);
+  endShape();
+}
+
 function heart(x, y) {
   beginShape();
   vertex(x, y);
